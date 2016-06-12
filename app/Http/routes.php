@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('store',function(){
-	return view('store');
-});
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
